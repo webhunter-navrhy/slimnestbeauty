@@ -1,5 +1,11 @@
-:root{--papir:#faf1ec;--papir2:#f4e2dc;--ink:#1f1613;--ink2:#5e4f49;--zlato:#c9975f;--zlato-t:#85592c;--zlato-g:linear-gradient(100deg,#9a6a2f,#d9a86c 45%,#a8733a);--ruze:#efc9c6;--cara:rgba(31,22,19,.16);--hl-bg:rgba(250,241,236,.92);--pole:rgba(255,255,255,.7);--bila:#fff;--na-zlate:#fff;--wrap:76rem;--serif:"Castoro",Georgia,serif;--sans:"Roboto Flex",system-ui,sans-serif;color-scheme:light}
-html[data-tema=dark]{--papir:#17100d;--papir2:#201512;--ink:#f5e8de;--ink2:#c8b5a8;--zlato:#d9a86c;--zlato-t:#e3b983;--ruze:#3b2124;--cara:rgba(245,232,222,.2);--hl-bg:rgba(23,16,13,.92);--pole:rgba(255,255,255,.06);--bila:#2a1c18;--na-zlate:#1b110d;color-scheme:dark}
+@font-face { font-family:'Castoro'; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/castoro-italic-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face { font-family:'Castoro'; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/castoro-italic-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face { font-family:'Castoro'; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/castoro-normal-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face { font-family:'Castoro'; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/castoro-normal-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+@font-face { font-family:'Roboto Flex'; font-style: normal; font-weight: 300 600; font-stretch: 100%; font-display: swap; src: url("../fonts/robotoflex-normal-latin-ext.woff2") format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face { font-family:'Roboto Flex'; font-style: normal; font-weight: 300 600; font-stretch: 100%; font-display: swap; src: url("../fonts/robotoflex-normal-latin.woff2") format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+:root{--papir:#fcefea;--papir2:#f5d9d4;--ink:#1f1613;--ink2:#5e4f49;--zlato:#c48e4f;--zlato-t:#7a4e21;--zlato-g:linear-gradient(100deg,#8c5c25,#e3b777 45%,#a06a30);--ruze:#e4adb0;--ruze-h:#b9525f;--cara:rgba(31,22,19,.16);--hl-bg:rgba(250,241,236,.92);--pole:rgba(255,255,255,.7);--bila:#fff;--na-zlate:#fff;--wrap:76rem;--serif:"Castoro",Georgia,serif;--sans:"Roboto Flex",system-ui,sans-serif;color-scheme:light}
+html[data-tema=dark]{--papir:#190f12;--papir2:#25151a;--ink:#f5e8de;--ink2:#c8b5a8;--zlato:#d9a86c;--zlato-t:#e3b983;--ruze:#4c2230;--ruze-h:#d98a96;--cara:rgba(245,232,222,.2);--hl-bg:rgba(23,16,13,.92);--pole:rgba(255,255,255,.06);--bila:#2a1c18;--na-zlate:#1b110d;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{margin:0;background:var(--papir);color:var(--ink);font:300 1.0625rem/1.7 var(--sans);transition:background .35s,color .35s;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}a{color:inherit}
@@ -113,3 +119,47 @@ address{font-style:normal;margin:1.5rem 0 2rem}.platby{display:flex;flex-wrap:wr
 .kontakt-grid>*{min-width:0}.mapa-ram{width:100%;max-width:100%}
 @media (max-width:60rem){.mapa-ram{aspect-ratio:auto;height:18rem;min-height:0}}
 body{overflow-x:clip}.karta{max-width:100%}
+/* ===== v3 ===== */
+body{background:var(--papir)}
+.hero{background:radial-gradient(60rem 40rem at 88% 18%,rgba(228,173,176,.8),transparent 70%),radial-gradient(40rem 26rem at 0% 100%,rgba(227,183,119,.22),transparent 70%)}
+html[data-tema=dark] .hero{background:radial-gradient(60rem 40rem at 88% 18%,rgba(140,58,78,.5),transparent 70%),radial-gradient(40rem 26rem at 0% 100%,rgba(227,183,119,.1),transparent 70%)}
+/* římské číslice u nadpisů, kurzíva ve zlatě (styl Studia Brigit) */
+main{counter-reset:sekce}.sekce h2{counter-increment:sekce}
+.sekce h2::before{content:counter(sekce,upper-roman) ".";display:block;font:500 .78rem var(--sans);letter-spacing:.3em;color:var(--zlato-t);margin-bottom:.9rem}
+.sekce h2 em{font-style:italic}
+.pruh-ai{background:linear-gradient(100deg,#6b2438,#8e3a4c 55%,#a85a52);color:#fbe9dc;position:relative;overflow:hidden}
+.pruh-ai::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(227,183,119,.28) 50%,transparent 70%);background-size:220% 100%;animation:prelesk 8s ease-in-out infinite alternate}@keyframes prelesk{from{background-position:0 0}to{background-position:100% 0}}
+.pruh-ai .wrap{position:relative}.pruh-ai .btn-linka{color:#fbe9dc;border-color:#e3b777}.pruh-ai .btn-linka:hover{background:#e3b777;color:#3a1520}
+.o-nas{background:linear-gradient(160deg,#e9b4b6,#dc98a0 70%,#d98d94);color:#3b1820}html[data-tema=dark] .o-nas{background:linear-gradient(160deg,#4c2230,#3a1a26);color:var(--ink)}
+.o-nas h2::before,.o-nas blockquote{color:#6f3f14}html[data-tema=dark] .o-nas h2::before{color:var(--zlato)}.o-nas h2 em{color:#6f3f14}.o-nas blockquote{border-left-color:#b8863f}
+.o-nas .o-text p{color:inherit}
+/* poukaz: nové šablony */
+.karta{aspect-ratio:1.7/1;align-items:center;text-align:center;justify-content:center;gap:0;padding:clamp(1.4rem,3.4vw,2.4rem);box-shadow:0 30px 60px -28px rgba(80,20,36,.65),inset 0 0 0 1px rgba(255,255,255,.25);--foil:linear-gradient(115deg,#8a5a26,#f0d29b 28%,#b17b3c 52%,#f6e0b4 78%,#8a5a26)}
+.karta::before{inset:.6rem;border:1px solid var(--lin);border-image:var(--foil) 1}
+.karta::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.35) 50%,transparent 60%);background-size:250% 100%;background-position:120% 0;animation:lesk-karta 6s 1s ease-in-out infinite;pointer-events:none;border:0}
+@keyframes lesk-karta{to{background-position:-60% 0}}
+.rohy i{position:absolute;width:1.5rem;height:1.5rem;border:solid var(--lin);border-width:0}.rohy i:nth-child(1){left:.35rem;top:.35rem;border-width:2px 0 0 2px}.rohy i:nth-child(2){right:.35rem;top:.35rem;border-width:2px 2px 0 0}.rohy i:nth-child(3){left:.35rem;bottom:.35rem;border-width:0 0 2px 2px}.rohy i:nth-child(4){right:.35rem;bottom:.35rem;border-width:0 2px 2px 0}
+.karta-logo{position:static;width:2.6rem;height:2.6rem;margin:0 0 .2rem;background:transparent;border-radius:0;padding:0;mix-blend-mode:multiply}.karta-cerny .karta-logo,.karta-vino .karta-logo{mix-blend-mode:normal;background:#fff;border-radius:50%;padding:.1rem}
+.karta-znacka{margin:0;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;position:relative;opacity:.85}
+.karta-nadpis{font-style:italic;font-size:clamp(1.7rem,3.8vw,2.5rem);margin:.2rem 0 0}
+.karta-delic{display:flex;align-items:center;gap:.5rem;margin:.35rem 0;width:min(11rem,60%)}.karta-delic b{flex:1;height:1px;background:var(--lin)}.karta-delic i{width:.4rem;height:.4rem;background:var(--lin);transform:rotate(45deg)}
+.karta-hodnota{font-size:clamp(1.3rem,2.8vw,1.9rem);margin:0}
+.karta-komu{margin-top:.3rem;font-size:.9rem;letter-spacing:.06em}.karta-venovani{max-width:32ch;margin:.25rem auto 0}.karta-od{font-style:italic}
+.karta-pata{left:0;right:0;bottom:1.15rem;text-align:center;font-size:.56rem;letter-spacing:.26em}
+.karta-kontura{right:-.5rem;opacity:.3}
+.karta-ruzovy{background:radial-gradient(circle at 18% 8%,#fbe3df,#e8aeb0 55%,#d27f89);color:#4a1a26;--lin:#a8733a}
+.karta-ruzovy .karta-hodnota,.karta-perlovy .karta-hodnota{background:linear-gradient(115deg,#7a4e21,#b17b3c 50%,#7a4e21);-webkit-background-clip:text;background-clip:text;color:transparent}
+.karta-cerny{background:radial-gradient(circle at 80% 0,#33241f,#120c0a 65%);color:#ecd0a0;--lin:#d9a86c}
+.karta-perlovy{background:linear-gradient(135deg,#fffaf3,#f5e3da 55%,#efcdc9);color:#5a3a2a;--lin:#b8863f}
+.karta-vino{background:radial-gradient(circle at 20% 0,#8e3a4c,#561a2c 65%,#3b1020);color:#f4dcc0;--lin:#e3b777}.karta-vino .karta-hodnota{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
+.karta-cerny .karta-hodnota{background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* platba */
+.platba{border:1px solid var(--zlato);padding:clamp(1.4rem,3vw,2.2rem);background:var(--pole)}.platba[hidden]{display:none}.platba h3{font-size:1.7rem;margin-bottom:1rem}
+.platba-pozn{background:var(--ruze);color:inherit;padding:.7rem .9rem;font-size:.85rem;margin:0 0 1.2rem}html:not([data-tema=dark]) .platba-pozn{color:#3b1820}
+.platba-grid{display:grid;grid-template-columns:auto 1fr;gap:1.6rem;align-items:center}.platba-qr{text-align:center}.platba-qr canvas{width:11.5rem;height:11.5rem;border:1px solid var(--cara);background:#fff;display:block;margin:0 auto .4rem}.platba-qr small{font-size:.75rem;color:var(--ink2)}
+.platba dl{margin:0}.platba dt{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--zlato-t)}.platba dd{margin:0 0 .8rem;font-family:var(--serif);font-size:1.15rem;overflow-wrap:anywhere}
+.platba-dal{color:var(--ink2);font-size:.92rem;margin:1.2rem 0}
+@media (max-width:40rem){.platba-grid{grid-template-columns:1fr}}
+/* mapa */
+.mapa-ram iframe{width:100%;height:100%;border:0;filter:sepia(.35) hue-rotate(-20deg) saturate(1.1)}html[data-tema=dark] .mapa-ram iframe{filter:invert(.92) hue-rotate(160deg) sepia(.25) saturate(.8)}
+@media (prefers-reduced-motion:reduce){.pruh-ai::before,.karta::after{animation:none}}

@@ -79,9 +79,9 @@
 <section class="sekce poukaz" id="poukaz">
   <div class="wrap">
     <h2>Dárkový poukaz podle Vašich představ</h2>
-    <p class="poukaz-uvod">Vyberte hodnotu nebo ošetření, design a věnování. Poukaz vidíte rovnou vedle. Objednávku nám odešlete e-mailem a domluvíme převzetí.</p>
+    <p class="poukaz-uvod">Vyberte hodnotu nebo ošetření, design a věnování. Poukaz vidíte rovnou vedle. Po odeslání objednávky uvidíte údaje k platbě převodem nebo QR kódem. Poukaz Vám pošleme po připsání platby.</p>
     <div class="konf">
-      <form class="konf-form" id="konf" novalidate>
+      <form class="konf-form" id="konf" novalidate data-qr="{{ asset('js/qr.js') }}" data-iban="{{ site.platba.iban }}" data-ucet="{{ site.platba.ucet }}" data-prijemce="{{ site.platba.prijemce }}" data-email="{{ site.kontakt.email }}">
         <fieldset><legend>1. Na co poukaz je</legend>
           <label class="volba"><input type="radio" name="druh" value="hodnota" checked> Na libovolnou hodnotu</label>
           <label class="volba"><input type="radio" name="druh" value="osetreni"> Na konkrétní ošetření</label>
@@ -108,6 +108,7 @@
             <label><input type="radio" name="vzhled" value="ruzovy" checked><span>Pudrově růžový</span></label>
             <label><input type="radio" name="vzhled" value="cerny"><span>Černo-zlatý</span></label>
             <label><input type="radio" name="vzhled" value="perlovy"><span>Perleťový</span></label>
+            <label><input type="radio" name="vzhled" value="vino"><span>Vínově zlatý</span></label>
           </div>
         </fieldset>
         <fieldset><legend>3. Pro koho</legend>
@@ -120,19 +121,37 @@
           <label class="volba"><input type="radio" name="predani" value="v tištěném provedení"> V tištěném provedení</label>
         </fieldset>
         <label class="pole">Váš e-mail pro potvrzení <input name="email" type="email" autocomplete="email" placeholder="vas@email.cz"></label>
-        <button class="btn btn-zlato" type="submit">Odeslat objednávku e-mailem</button>
-        <p class="formular-stav" role="status" aria-live="polite">Ukázka konfigurátoru: tlačítko připraví e-mail se zadanými údaji. Online platba se doplní při napojení.</p>
+        <button class="btn btn-zlato" type="submit">Objednat a zaplatit</button>
+        <p class="formular-stav" role="status" aria-live="polite">Ukázka objednávky: nic se neodesílá, dokud web nespustíme. Po napojení přijde objednávka salonu e-mailem.</p>
       </form>
+      <div class="platba" id="platba" hidden tabindex="-1" role="region" aria-label="Platba za poukaz">
+        <h3>Objednávka přijata, zbývá zaplatit</h3>
+        <p class="platba-pozn" id="p-demo" hidden>Ukázka: číslo účtu a QR kód jsou jen vzorové a platit se jimi nedá. Ostré údaje salonu doplníme při spuštění.</p>
+        <div class="platba-grid">
+          <div class="platba-qr"><canvas id="p-qr" width="200" height="200" role="img" aria-label="QR kód platby"></canvas><small>Naskenujte v bankovní aplikaci</small></div>
+          <dl>
+            <dt>Číslo účtu</dt><dd id="p-ucet"></dd>
+            <dt>Částka</dt><dd id="p-castka"></dd>
+            <dt>Variabilní symbol</dt><dd id="p-vs"></dd>
+            <dt>Zpráva pro příjemce</dt><dd id="p-zprava"></dd>
+          </dl>
+        </div>
+        <p class="platba-dal">Po připsání platby Vám salon pošle poukaz na e-mail<span id="p-mail"></span>. Pokud nechcete čekat, pošlete nám objednávku rovnou e-mailem.</p>
+        <p><a class="btn btn-zlato" id="p-mailto" href="#">Poslat objednávku e-mailem</a> <button type="button" class="btn btn-linka" id="p-zpet">Upravit poukaz</button></p>
+      </div>
       <div class="konf-nahled">
         <div class="karta-obal"><div class="karta karta-ruzovy" id="karta" aria-live="polite">
           <svg class="karta-kontura" viewBox="0 0 220 640" aria-hidden="true" focusable="false"><path d="M150 4 C128 40 128 74 140 104 C152 134 150 156 128 178 C98 208 84 244 100 292 C112 330 108 352 90 388 C70 428 56 470 72 520 C80 546 96 566 118 580 M150 4 C178 36 182 70 170 102 C158 136 164 160 188 192 C214 226 214 262 192 300 C170 340 170 366 188 404 C206 444 206 490 184 530 C170 556 150 574 118 580"/></svg>
+          <span class="rohy" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
           <img class="karta-logo" src="{{ base }}logo.png" alt="" width="64" height="64">
+          <p class="karta-znacka">Slim Nest Beauty</p>
           <p class="karta-nadpis">Dárkový poukaz</p>
+          <p class="karta-delic" aria-hidden="true"><b></b><i></i><b></b></p>
           <p class="karta-hodnota" id="k-hodnota">2 000 Kč</p>
           <p class="karta-komu" id="k-komu">Pro vás</p>
           <p class="karta-venovani" id="k-venovani">&nbsp;</p>
           <p class="karta-od" id="k-od"></p>
-          <p class="karta-pata">Slim Nest Beauty · Křídlovická 43/24, Brno</p>
+          <p class="karta-pata">Křídlovická 43/24 · Brno</p>
         </div></div>
         <p class="nahled-pozn">Náhled poukazu se mění podle Vašeho výběru. Platnost a podmínky poukazu určuje salon.</p>
       </div>

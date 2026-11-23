@@ -54,5 +54,10 @@
       "text": "Kontakt",
       "href": "#kontakt"
     }
-  ]
+  ],
+  "platba": {
+    "prijemce": "Slim Nest Beauty s.r.o.",
+    "ucet": "",
+    "iban": ""
+  }
 }

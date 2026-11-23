@@ -6,12 +6,13 @@ if(tl)tl.addEventListener('click',function(){var o=nav.classList.toggle('otevren
 $$('#hl-nav a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('otevrene')})});
 // tmavý / světlý režim
 var tt=$('.tema-tl'),de=document.documentElement,mt=$('meta[name=theme-color]');
-var tema=function(t,ul){de.dataset.tema=t;if(tt){tt.setAttribute('aria-pressed',t==='dark');tt.setAttribute('aria-label',t==='dark'?'Přepnout na světlý režim':'Přepnout na tmavý režim')}if(mt)mt.content=t==='dark'?'#17100d':'#faf1ec';if(ul)try{localStorage.setItem('tema',t)}catch(e){}};
+var tema=function(t,ul){de.dataset.tema=t;if(tt){tt.setAttribute('aria-pressed',t==='dark');tt.setAttribute('aria-label',t==='dark'?'Přepnout na světlý režim':'Přepnout na tmavý režim')}if(mt)mt.content=t==='dark'?'#190f12':'#fcefea';if(ul)try{localStorage.setItem('tema',t)}catch(e){}};
 tema(de.dataset.tema||'light',false);
 if(tt)tt.addEventListener('click',function(){tema(de.dataset.tema==='dark'?'light':'dark',true)});
-// mapa až po kliknutí
-var mp=$('#mapa'),mb=$('[data-nacti-mapu]');
-if(mb)mb.addEventListener('click',function(){var i=document.createElement('iframe');i.src=mp.getAttribute('data-src');i.title='Mapa: Slim Nest Beauty, Křídlovická 43/24, Brno';i.loading='lazy';mp.innerHTML='';mp.appendChild(i)});
+// interaktivní mapa: načte se, až se sekce objeví (nebo po kliknutí)
+var mp=$('#mapa'),mb=$('[data-nacti-mapu]'),mapaOn=function(){if(mp.querySelector('iframe'))return;var i=document.createElement('iframe');i.src=mp.getAttribute('data-src');i.title='Interaktivní mapa: Slim Nest Beauty, Křídlovická 43/24, Brno';i.loading='lazy';mp.innerHTML='';mp.appendChild(i)};
+if(mb)mb.addEventListener('click',mapaOn);
+if(mp&&'IntersectionObserver' in window&&matchMedia('(hover:hover)').matches){var mo=new IntersectionObserver(function(z){if(z[0].isIntersecting){mapaOn();mo.disconnect()}},{rootMargin:'200px'});mo.observe(mp)}
 // přepínač služeb
 var taby=$$('.vyber-menu [role=tab]');
 taby.forEach(function(t){t.addEventListener('click',function(){taby.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);$('#'+x.getAttribute('aria-controls')).hidden=!on})})});
@@ -36,12 +37,25 @@ if(f){
   $('#k-od').textContent=v('od')?'Od '+v('od'):''};
  var ob=$('.karta-obal');if(ob&&matchMedia('(hover:hover)').matches){ob.addEventListener('pointermove',function(e){var r=ob.getBoundingClientRect();karta.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*8+'deg');karta.style.setProperty('--rx',(.5-(e.clientY-r.top)/r.height)*8+'deg')});ob.addEventListener('pointerleave',function(){karta.style.setProperty('--rx','0deg');karta.style.setProperty('--ry','0deg')})}
  f.addEventListener('input',kresli);f.addEventListener('change',kresli);kresli();
+ var pl=$('#platba'),bez=function(t){return t.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^A-Za-z0-9 .,\-]/g,'')};
+ var qrKreslit=function(txt){var cv=$('#p-qr'),go=function(){var q=qrcode(0,'M');q.addData(txt);q.make();var n=q.getModuleCount(),px=Math.floor(200/(n+4)),w=px*(n+4);cv.width=cv.height=w;var c=cv.getContext('2d');c.fillStyle='#fff';c.fillRect(0,0,w,w);c.fillStyle='#1f1613';for(var r=0;r<n;r++)for(var k=0;k<n;k++)if(q.isDark(r,k))c.fillRect((k+2)*px,(r+2)*px,px,px)};
+  if(window.qrcode)return go();var s=document.createElement('script');s.src=f.getAttribute('data-qr');s.onload=go;document.head.appendChild(s)};
+ var objednavka=function(vs){return ['Dobrý den,','','objednávám dárkový poukaz:','Na: '+obsah(),'Vzhled: '+({cerny:'černo-zlatý',perlovy:'perleťový',vino:'vínově zlatý'}[v('vzhled')]||'pudrově růžový'),'Pro koho: '+(v('komu')||'-'),'Od koho: '+(v('od')||'-'),'Věnování: '+(v('venovani')||'-'),'Převzetí: '+v('predani'),'Variabilní symbol platby: '+vs,'Kontakt na mě: '+(v('email')||'-'),'','Děkuji'].join('\n')};
  f.addEventListener('submit',function(e){e.preventDefault();
-  var st=$('.formular-stav',f),em=v('email');
-  if(v('druh')==='hodnota'&&v('castka')==='jina'&&!parseInt(v('jina'),10)){st.textContent='Doplňte prosím částku.';return}
-  var t=['Dobrý den,','','objednávám dárkový poukaz:','Na: '+obsah(),'Vzhled: '+({cerny:'černo-zlatý',perlovy:'perleťový'}[v('vzhled')]||'pudrově růžový'),'Pro koho: '+(v('komu')||'-'),'Od koho: '+(v('od')||'-'),'Věnování: '+(v('venovani')||'-'),'Převzetí: '+v('predani'),'Kontakt na mě: '+(em||'-'),'','Děkuji'].join('\n');
-  st.textContent='Otevírám e-mail s objednávkou…';
-  location.href='mailto:slimnestbeauty@gmail.com?subject='+encodeURIComponent('Objednávka dárkového poukazu')+'&body='+encodeURIComponent(t)});
+  var st=$('.formular-stav',f),em=v('email'),hodnota=v('druh')==='hodnota';
+  if(hodnota&&v('castka')==='jina'&&!parseInt(v('jina'),10)){st.textContent='Doplňte prosím částku.';return}
+  if(!em||em.indexOf('@')<1){st.textContent='Doplňte prosím e-mail, na který poukaz pošleme.';return}
+  var d=new Date(),vs=String(d.getFullYear()).slice(2)+('0'+(d.getMonth()+1)).slice(-2)+('0'+d.getDate()).slice(-2)+String(Math.floor(1000+Math.random()*9000));
+  var kc=hodnota?(v('castka')==='jina'?parseInt(v('jina'),10):parseInt(v('castka'),10)):0;
+  var iban=f.getAttribute('data-iban'),ucet=f.getAttribute('data-ucet'),demo=!iban;
+  if(demo){iban='CZ6508000000192000145399';ucet='19-2000145399/0800 (vzor)'}
+  var zpr='Poukaz '+bez(v('komu')||'Slim Nest Beauty');
+  var spd='SPD*1.0*ACC:'+iban+(kc?'*AM:'+kc.toFixed(2):'')+'*CC:CZK*X-VS:'+vs+'*RN:'+bez(f.getAttribute('data-prijemce')).toUpperCase().slice(0,35)+'*MSG:'+zpr.toUpperCase().slice(0,60);
+  $('#p-ucet').textContent=ucet;$('#p-castka').textContent=kc?fmt(kc):'podle ceníku ošetření, potvrdíme e-mailem';$('#p-vs').textContent=vs;$('#p-zprava').textContent=zpr;
+  $('#p-mail').textContent=' '+em;$('#p-demo').hidden=!demo;
+  $('#p-mailto').href='mailto:'+f.getAttribute('data-email')+'?subject='+encodeURIComponent('Objednávka dárkového poukazu '+vs)+'&body='+encodeURIComponent(objednavka(vs));
+  qrKreslit(spd);f.hidden=true;pl.hidden=false;pl.focus();pl.scrollIntoView({behavior:'smooth',block:'start'})});
+ $('#p-zpet').addEventListener('click',function(){pl.hidden=true;f.hidden=false;f.scrollIntoView({behavior:'smooth',block:'start'})});
 }
 // kontaktní formulář (ukázka)
 $$('form.formular').forEach(function(fm){var st=$('.formular-stav',fm);fm.addEventListener('submit',function(e){e.preventDefault();if($('.past input',fm).value)return;
