@@ -1,0 +1,101 @@
+{% extends "_base.html" %}
+{% set titulek = 'Slim Nest Beauty Brno | EMS, HIFU a SlimFlow v klidném salonu' %}
+{% set cesta = '' %}
+{% block obsah %}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="psane">Brno · Staré Brno</p>
+      <h1>Péče, která Vám vrátí lehkost a&nbsp;sebejistotu</h1>
+      <p class="uvod">Tvarování těla, zpevnění pokožky a lymfodrenáž pro ženy i muže. V klidném soukromém salonu, kde se nemusíte za nic stydět.</p>
+      <p class="tlacitka"><a class="btn" href="#kontakt">Objednat se</a> <a class="btn btn-linka" href="#sluzby">Co nabízíme</a></p>
+      <p class="adresa-hero">Křídlovická 43/24, Brno · parkování u budovy</p>
+    </div>
+    <div class="hero-foto">{{ img('tvar.jpg', 'Žena s upraveným účesem a zdravou pletí', sizes='(min-width: 60rem) 50vw, 100vw') }}</div>
+  </div>
+</section>
+
+<section class="sekce proc">
+  <div class="wrap">
+    <h2>Proč k nám</h2>
+    <ol role="list" class="proc-seznam">
+      <li><h3>Komfort během celé procedury</h3><p>Klidný, příjemně provoněný interiér a televize v místnostech. Můžete si pustit film, seriál nebo hudbu.</p></li>
+      <li><h3>Férové a dostupné ceny</h3><p>Ceny jsou transparentní, bez skrytých poplatků. Klient vždy přesně ví, za co platí.</p></li>
+      <li><h3>Parkování a soukromí</h3><p>Soukromé parkování přímo u budovy, čistý a tichý prostor s dostatkem soukromí.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sekce sluzby" id="sluzby">
+  <div class="wrap">
+    <p class="psane">Naše služby</p>
+    <h2>Ošetření, která mají smysl</h2>
+    {% for s in data.sluzby %}
+    <article class="sluzba{{ ' obracene' if loop.index is even }}">
+      <div class="sluzba-text"><span class="stitek">{{ s.stitek }}</span><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p><a class="odkaz" href="#kontakt">Objednat se</a></div>
+      <div class="ram sluzba-foto">{{ img(s.foto, s.nazev, sizes='(min-width: 60rem) 40vw, 90vw') }}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="sekce salon" id="salon">
+  <div class="wrap">
+    <h2>Salon, ve kterém zpomalíte</h2>
+    <p class="salon-uvod">Atmosféra není jen doplněk, je součástí zážitku. Moderní a kvalitní vybavení, každý detail nastavený tak, aby byl průběh pohodlný a přirozeně příjemný.</p>
+    <div class="galerie">
+      <div class="ram g1">{{ img('recepce.jpg', 'Recepce salonu s posezením', sizes='(min-width: 60rem) 40vw, 90vw') }}</div>
+      <div class="ram g2">{{ img('mistnost1.jpg', 'Ošetřovna s lehátkem a televizí', sizes='(min-width: 60rem) 30vw, 90vw') }}</div>
+      <div class="ram g3">{{ img('mistnost2.jpg', 'Druhá místnost salonu', sizes='(min-width: 60rem) 30vw, 90vw') }}</div>
+      <div class="ram g4">{{ img('rucniky.jpg', 'Ručníky a svíčky v ošetřovně', sizes='(min-width: 60rem) 60vw, 90vw') }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce o-nas" id="o-nas">
+  <div class="wrap o-grid">
+    <div>
+      <p class="psane">O nás</p>
+      <h2>Místo, kde se nemusíte stydět za své tělo</h2>
+    </div>
+    <div class="o-text">
+      <p>Slim Nest Beauty vzniklo s myšlenkou vytvořit místo, kde se lidé budou cítit dobře, respektovaně a v bezpečném prostředí. Salón jsem založila společně se svým partnerem, který stojí za celým projektem se mnou.</p>
+      <p>Sama mám zdravotní a hormonální potíže a pravidelně podstupuji různé procedury, protože mi pomáhají cítit se lépe. Díky tomu vím, jak důležité je, aby byla péče citlivá, příjemná a aby člověku opravdu ulevila. Nejen fyzicky, ale i psychicky.</p>
+      <blockquote>Prostor, kde si můžete dovolit na chvíli zpomalit, nadechnout se a odejít s pocitem klidu, lehkosti a jistoty, že vám někdo opravdu rozuměl.</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sekce poukaz" id="poukaz">
+  <div class="wrap poukaz-grid">
+    <div class="poukaz-text">
+      <p class="psane">Dárkové poukazy</p>
+      <h2>Darujte péči, relax a viditelné výsledky</h2>
+      <p>Poukaz lze vystavit na konkrétní proceduru nebo na libovolnou hodnotu. Je vhodný k narozeninám, Vánocům, výročí i jako poděkování. Je přenosný a má stanovenou dobu platnosti. Vystavení je možné osobně na recepci, nebo v reprezentativním tištěném provedení.</p>
+      <p class="tlacitka"><a class="btn btn-zlato" href="#kontakt">Objednat poukaz</a></p>
+    </div>
+    <div class="poukazy">
+      <div class="p-karta p1">{{ img('poukaz-cerny.jpg', 'Černý dárkový poukaz se zlatým písmem', sizes='(min-width: 60rem) 36vw, 90vw') }}</div>
+      <div class="p-karta p2">{{ img('poukaz-ruzovy.jpg', 'Růžový dárkový poukaz se zlatým písmem', sizes='(min-width: 60rem) 36vw, 90vw') }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="sekce kontakt" id="kontakt">
+  <div class="wrap kontakt-grid">
+    <div>
+      <h2>Objednejte se k nám</h2>
+      <p>Jednoduše přes formulář, e-mail nebo telefon.</p>
+      <address>
+        <strong>Slim Nest Beauty</strong><br>
+        {{ site.kontakt.adresa.ulice }}<br>{{ site.kontakt.adresa.psc }} Brno-Staré Brno<br>
+        <a href="tel:{{ site.kontakt.telefon|replace(' ', '') }}">{{ site.kontakt.telefon }}</a><br>
+        <a href="mailto:{{ site.kontakt.email }}">{{ site.kontakt.email }}</a>
+      </address>
+      <h3>Možnosti platby</h3>
+      <ul role="list" class="platby"><li>Hotově</li><li>NFC (telefon)</li><li>QR kód</li><li>Benefit Plus</li><li>Pluxee</li></ul>
+    </div>
+    <div class="form-box">{% include "_formular.html" %}</div>
+  </div>
+</section>
+{% endblock %}

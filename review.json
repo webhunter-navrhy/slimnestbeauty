@@ -1,0 +1,18 @@
+{
+  "znamka": 8,
+  "slabiny": [
+    "Služby – SlimFlow (PC i mobil): číslování 01/02/03 je pryč a štítky jsou doplněné, ale SlimFlow má pořád jen jeden řádek „Přístrojová lymfodrenáž nové generace.“ V zigzagu vedle EMS a HIFU proto působí jako poloprázdná sekce s velkou fotkou. Masáže chybí, i když v podkladech jsou fotky masaze-madero, -sportovni, -lymfaticka a -skandinavsk ze srpna 2026. Oprava: na slimnestbeauty.cz ověřit, jestli salon masáže nabízí. Pokud ano, přidat pod HIFU kompaktní blok „Masáže a lymfodrenáž“ (SlimFlow + masáže v řádku malých karet s fotkou a názvem) a velkou zigzag položku SlimFlow zrušit. Pokud ne, dát SlimFlow do užšího řádku bez velké fotky.",
+    "Hlavička na mobilu (390 px): tlačítko „OBJEDNAT SE“ se láme na dva řádky („OBJEDNAT / SE“), tvoří těžký černý blok asi 120×60 px a „Slim Nest Beauty“ se vedle něj taky láme na dva řádky. Navigace na mobilu chybí úplně. Oprava: na mobilu zkrátit tlačítko na „Objednat“ s `white-space: nowrap` a menším vnitřním odsazením, přidat ikonu rozbalovacího menu (hamburger, aspoň 44 px) a název nechat na jednom řádku (menší font nebo jen logo + „Slim Nest“). Hlavička by pak měla zabrat nejvýš asi 60 px.",
+    "Salon na mobilu: čtyři fotky interiéru mají zdroj jen 400 px a jsou pod sebou přes celou šířku. QA hlásí zvětšení 1,63×, takže jsou měkké, a sekce je zbytečně dlouhá. Oprava: na mobilu dát tři fotky interiéru do mřížky 2 + 1 (nebo vodorovně posuvného pásu s náhledy kolem 170 px), aby se vykreslovaly v nativní velikosti. Širokou fotku s ručníkem nechat jen jako úzký pruh pod nimi nebo ji na mobilu vypustit."
+  ],
+  "zavazne": [],
+  "silne": [
+    "Hero je opravené. Na PC zabírá velký portrét bez rámečku celou výšku až k pravému okraji, na mobilu je fotka přes celou šířku nad nadpisem. Pod tlačítky je řádek „Křídlovická 43/24, Brno · parkování u budovy“. Schéma „malá fotka v rámečku“ z Metelky už tu není.",
+    "Hlavička na PC: logo vlevo, vedle něj název textem a vpravo jasné tlačítko „Objednat se“. Značka je čitelná a hlavní akce je vidět hned.",
+    "Číslování 01/02/03 a i./ii./iii. je pryč. Nad službami jsou krátké štítky (Tvarování postavy, Zpevnění pleti, Lymfodrenáž) a pořád seděly do světlé růžovo-pískové palety z brandu.",
+    "Všechny texty jsou z briefu (Proč k nám, O nás s osobním příběhem majitelky, poukazy, možnosti platby). Nic není vymyšlené. Kontakt má adresu, telefon, e-mail i formulář.",
+    "Tmavá sekce s dárkovými poukazy vychází z reálných černo-zlatých poukazů salonu, nejde o samoúčelný „luxus“. Nic nepřetéká na žádné ze šesti šířek."
+  ],
+  "verdikt": "Hlavní výtky z minulého kola (hero, číslování, hlavička na PC) jsou opravené a web teď působí jako světlý, klidný salon s jasnou výzvou k objednání. Zbývá dodělat SlimFlow s masážemi a hlavičku na mobilu. Nejde o závažné vady, web je na hraně odeslání.",
+  "_hash": "51058a8edee7106801812e96934fcc9845068143"
+}

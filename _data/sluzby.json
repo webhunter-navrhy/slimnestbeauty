@@ -1,0 +1,20 @@
+[
+  {
+    "nazev": "EMS procedura (EMSko)",
+    "popis": "Intenzivní svalová aktivace, která zpevňuje postavu, podporuje lymfatický systém, napomáhá spalování tuků a přináší efekt srovnatelný s výrazně delším tréninkem.",
+    "foto": "osetreni.jpg",
+    "stitek": "Tvarování postavy"
+  },
+  {
+    "nazev": "HIFU zpevnění a redukce tuku",
+    "popis": "Neinvazivní ošetření, které tvaruje kontury, zpevňuje pokožku a podporuje přirozenou tvorbu kolagenu. Technologie zároveň cíleně působí na tukové buňky v hlubších vrstvách, kde dochází k jejich narušení. Následně jsou postupně odbourávány a vylučovány přirozenou cestou prostřednictvím lymfatického systému.",
+    "foto": "portret.jpg",
+    "stitek": "Zpevnění pleti"
+  },
+  {
+    "nazev": "SlimFlow",
+    "popis": "Přístrojová lymfodrenáž nové generace.",
+    "foto": "masaz.jpg",
+    "stitek": "Lymfodrenáž"
+  }
+]

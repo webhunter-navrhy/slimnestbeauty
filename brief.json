@@ -1,0 +1,391 @@
+{
+ "slug": "slimnestbeauty",
+ "zdroj_url": "https://slimnestbeauty.cz",
+ "firma": "Slim Nest Beauty",
+ "obor": [
+  "zdraví a péče",
+  "stavebnictví a řemesla"
+ ],
+ "ico": "23785306",
+ "ares": {
+  "ico": "23785306",
+  "obchodni_jmeno": "Slim Nest Beauty s.r.o.",
+  "pravni_forma": "112",
+  "adresa": "Křídlovická 43/24, Staré Brno, 60300 Brno",
+  "obec": "Brno",
+  "dic": null,
+  "datum_vzniku": "2025-10-02",
+  "nace": [
+   "00",
+   "96230"
+  ]
+ },
+ "kontakty": {
+  "emaily": [
+   "20slimnestbeauty@gmail.com",
+   "slimnestbeauty@gmail.com"
+  ],
+  "telefony": [
+   "+420 739 749 256"
+  ],
+  "adresa": "",
+  "socialni_site": [
+   "https://www.facebook.com/share/16qc33FM9b/",
+   "https://www.instagram.com/slimnestbeauty?igsh=MWhyZWt5cmRpMzQ0aw=="
+  ]
+ },
+ "logo": {
+  "soubor": "podklady/logo.png",
+  "zdroj": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/Navrh-bez-nazvu.png",
+  "rozmery": [
+   500,
+   500
+  ]
+ },
+ "barvy": {
+  "css_promenne": {
+   "brand": "#c89365",
+   "brand-dark": "#a9774b",
+   "primary-color": "#00b4db",
+   "secondary-color": "#0083b0"
+  },
+  "z_css": [
+   "#00b4db",
+   "#c89365",
+   "#0038f0",
+   "#8300e9",
+   "#20b426",
+   "#ca1e1e"
+  ],
+  "z_loga": [
+   "#e3b051",
+   "#df5640",
+   "#32295c",
+   "#71408d"
+  ],
+  "theme_color": "#ffffff",
+  "doporucene": [
+   "#e3b051",
+   "#df5640",
+   "#c89365",
+   "#a9774b"
+  ]
+ },
+ "fotky": [
+  {
+   "soubor": "podklady/foto/foto-01.png",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/Navrh-bez-nazvu.png",
+   "sirka": 500,
+   "vyska": 500,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-02.png",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/check-mark-1-480x480.png",
+   "sirka": 480,
+   "vyska": 480,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-03.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/3-480x360.jpg",
+   "sirka": 480,
+   "vyska": 360,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-04.png",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/weight-loss-1-480x480.png",
+   "sirka": 480,
+   "vyska": 480,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-05.png",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/waist-480x480.png",
+   "sirka": 480,
+   "vyska": 480,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-06.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/poukazy-1.jpg",
+   "sirka": 1920,
+   "vyska": 880,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-07.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/poukazy-2.jpg",
+   "sirka": 1920,
+   "vyska": 868,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-08.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/poukazy-3.jpg",
+   "sirka": 1920,
+   "vyska": 895,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-09.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/poukazy-4.jpg",
+   "sirka": 1920,
+   "vyska": 918,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-10.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/slimnestbeauty-3-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-11.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/slimnestbeauty-4-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-12.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/slimnestbeauty-1-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-13.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/05/slimnestbeauty-2-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-14.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/11-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-15.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/9-1-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-16.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/10-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-17.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/8-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-18.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/08/masaze-madero-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-19.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/08/masaze-sportovni-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-20.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/08/masaze-lymfaticka-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-21.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2026/08/masaze-skandinavsk-400x284.jpg",
+   "sirka": 400,
+   "vyska": 284,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-22.png",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/Navrh-bez-nazvu-480x480.png",
+   "sirka": 480,
+   "vyska": 480,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-23.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/2.jpg",
+   "sirka": 1920,
+   "vyska": 1440,
+   "alt": ""
+  },
+  {
+   "soubor": "podklady/foto/foto-24.jpg",
+   "url": "https://slimnestbeauty.cz/wp-content/uploads/2025/12/Navrh-bez-nazvu-4.jpg",
+   "sirka": 1920,
+   "vyska": 1080,
+   "alt": ""
+  }
+ ],
+ "fakta": [
+  {
+   "typ": "h1",
+   "text": "Slim Nest Beauty",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Profesionální péče, která ženám i mužům vrátí lehkost a sebejistotu",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Proč nás navštívit",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "Komfort během celé procedury",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "Férové a dostupné ceny",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "Dostupné parkování a příjemné prostředí",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "O nás & našem salonu",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Naše služby",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "EMS procedura (EMSko)",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "HIFU zpevnění a redukce tuku",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "SlimFlow – přístrojová lymfodrenáž nové generace",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "Dárkové poukazy",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Objednejte se ještě dnes a dopřejte si chvíli jen pro sebe.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Objednejte se k nám",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Objednejte se on-line",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h3",
+   "text": "Dopřejte si péči, kterou si zasloužíte. Objednejte se na ošetření ještě dnes.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Možnosti platby",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "h2",
+   "text": "Sledujte nás",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Každá procedura probíhá v klidném a příjemně provoněném interiéru, kde se můžete skutečně uvolnit. Prostor je navržen tak, aby podporoval pocit soukromí, klidu a maximálního komfortu. V místnostech jsou k dispozici televize, díky kterým si můžete pustit film, seriál nebo hudbu a čas si zpříjemnit podle vlastních preferencí. Atmosféra není jen doplňkem, ale součástí celkového zážitku. Moderní a kvalitní vybavení zajišťuje, že procedury mají skutečný efekt a dávají smysl. Každý detail je nastaven tak, aby celý průběh byl pohodlný, profesionální a přirozeně příjemný. U nás nejde pouze o výsledek, ale i o to, jak se během procedury cítíte.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Ceník je nastaven tak, aby služby zůstaly na vysoké úrovni kvality a zároveň byly dlouhodobě dostupné. Zakládáme si na vyváženém poměru mezi výsledkem, komfortem a cenou. Ceny jsou nastaveny transparentně. Klient vždy přesně ví, za co platí, bez skrytých poplatků nebo nejasností. Často se pohybujeme příznivěji než konkurence u srovnatelných typů ošetření, aniž by to bylo na úkor kvality. Platba je možná kartou i v hotovosti, podle toho, co vám vyhovuje. Férový přístup a otevřená komunikace jsou pro nás samozřejmostí.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Soukromé parkování přímo u budovy zajišťuje klidný příjezd bez stresu a hledání místa. Samotný prostor salonu je čistý, tichý a upravený tak, aby měl každý dostatek soukromí. Přístup je vždy lidský a ohleduplný, aby se u nás každý cítil respektovaně a v dobrých rukou.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Slim Nest Beauty vzniklo s myšlenkou vytvořit místo, kde se lidé budou cítit dobře, respektovaně a v bezpečném prostředí. Místo, kde se člověk nemusí stydět za své tělo ani za to, čím si prochází. Salón jsem založila společně se svým partnerem, který je jeho spolumajitelem a stojí za celým projektem se mnou. Od začátku jsme chtěli vybudovat prostor, který nebude jen o přístrojích a procedurách, ale hlavně o přístupu, důvěře a lidskosti.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Sama mám zdravotní a hormonální potíže a pravidelně podstupuji různé procedury, protože mi pomáhají cítit se lépe. Díky tomu vím, jak důležité je, aby byla péče citlivá, příjemná a aby člověku opravdu ulevila. Nejen fyzicky, ale i psychicky. O klienty se v salonu stará náš personál, který pracuje profesionálně a s respektem, aby se u nás každý cítil příjemně a v dobrých rukou.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Slim Nest Beauty není jen místo, kam si přijdete na proceduru. Je to prostor, kde si můžete dovolit na chvíli zpomalit, nadechnout se a odejít s pocitem klidu, lehkosti a jistoty, že vám někdo opravdu rozuměl.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Intenzivní svalová aktivace, která zpevňuje postavu, podporuje lymfatický systém, napomáhá spalování tuků a přináší efekt srovnatelný s výrazně delším tréninkem.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Neinvazivní ošetření, které tvaruje kontury, zpevňuje pokožku a podporuje přirozenou tvorbu kolagenu. Technologie zároveň cíleně působí na tukové buňky v hlubších vrstvách, kde dochází k jejich narušení. Následně jsou postupně odbourávány a vylučovány přirozenou cestou prostřednictvím lymfatického systému.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Chcete potěšit někoho, na kom vám záleží? Dárkový poukaz je elegantní a praktický způsob, jak darovat péči, relax i viditelné výsledky. Poukaz lze vystavit na konkrétní proceduru nebo na libovolnou hodnotu. Obdarovaný si tak může vybrat službu podle svých potřeb a cílů. Dárkové poukazy jsou vhodné k narozeninám, Vánocům, výročí i jako poděkování. Jsou přenosné a mají stanovenou dobu platnosti, aby byl dostatek času na jejich využití. Vystavení je možné osobně na recepci. V případě zájmu lze poukaz připravit i ve formě reprezentativního tištěného provedení vhodného k předání.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  },
+  {
+   "typ": "odstavec",
+   "text": "Objednejte se jednoduše – ať už přes formulář, e-mail nebo telefon.",
+   "zdroj": "https://slimnestbeauty.cz/"
+  }
+ ],
+ "chybi": [
+  "adresa / provozovna",
+  "potvrzení služeb a ceníku (nic nevymýšlet)"
+ ],
+ "popis_webu": "Slim Nest Beauty Brno nabízí EMS, HIFU a Multishape ošetření. Neinvazivní tvarování těla, zpevnění pokožky a péče v klidném prostředí."
+}

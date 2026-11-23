@@ -1,0 +1,58 @@
+{
+  "slug": "slimnestbeauty",
+  "nazev": "Slim Nest Beauty",
+  "url": "https://webhunter-navrhy.github.io/slimnestbeauty/",
+  "base": "/slimnestbeauty/",
+  "lang": "cs",
+  "popis": "Slim Nest Beauty v Brně: EMS, HIFU a SlimFlow lymfodrenáž v klidném soukromém salonu. Dárkové poukazy, parkování u budovy.",
+  "navrh": true,
+  "domena": "",
+  "og_image": "tvar.jpg",
+  "logo": "logo.png",
+  "theme_color": "#171413",
+  "typ": "HealthAndBeautyBusiness",
+  "ico": "23785306",
+  "kontakt": {
+    "email": "slimnestbeauty@gmail.com",
+    "telefon": "+420 739 749 256",
+    "adresa": {
+      "ulice": "Křídlovická 43/24",
+      "psc": "603 00",
+      "mesto": "Brno-Staré Brno",
+      "zeme": "CZ"
+    }
+  },
+  "oteviraci_doba": [],
+  "sameas": [
+    "https://www.facebook.com/share/16qc33FM9b/",
+    "https://www.instagram.com/slimnestbeauty?igsh=MWhyZWt5cmRpMzQ0aw=="
+  ],
+  "cenove_rozpeti": "",
+  "formular": {
+    "endpoint": "",
+    "demo": true,
+    "predmet": "Poptávka z webu Slim Nest Beauty"
+  },
+  "nav": [
+    {
+      "text": "Služby",
+      "href": "#sluzby"
+    },
+    {
+      "text": "Salon",
+      "href": "#salon"
+    },
+    {
+      "text": "O nás",
+      "href": "#o-nas"
+    },
+    {
+      "text": "Poukaz",
+      "href": "#poukaz"
+    },
+    {
+      "text": "Kontakt",
+      "href": "#kontakt"
+    }
+  ]
+}
