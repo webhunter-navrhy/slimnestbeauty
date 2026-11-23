@@ -39,13 +39,13 @@ p{margin:0 0 1rem}
 .vyber-menu b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.15;margin-top:.3rem}
 .vyber-menu button[aria-selected=true]{color:var(--ink);padding-left:1.2rem;box-shadow:inset 3px 0 0 var(--zlato)}
 .panel{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem;align-items:start}.panel[hidden]{display:none}
-.panel-foto img{width:100%;aspect-ratio:3/4;object-fit:cover}.panel-text p{color:var(--ink2);margin:1rem 0 1.5rem}
+.panel-foto img{width:100%;max-width:19rem;aspect-ratio:3/4;object-fit:cover}.panel-text p{color:var(--ink2);margin:1rem 0 1.5rem}
 .pruh-ai{background:var(--ink);color:var(--papir);padding:2rem 0}.pruh-ai .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 .pruh-ai p{margin:0;font-family:var(--serif);font-size:1.5rem}.pruh-ai .btn-linka{color:var(--papir);border-color:var(--papir)}.pruh-ai .btn-linka:hover{background:var(--papir);color:var(--ink)}
 .salon-uvod{max-width:46ch;color:var(--ink2);margin-top:1.5rem}
 .pas{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x proximity;padding:2.5rem clamp(1.25rem,4vw,2.5rem) 1rem;margin-top:1rem}
-.pas figure{margin:0;flex:0 0 auto;scroll-snap-align:start}.pas img{height:20rem;width:auto;max-width:none;object-fit:cover}
-.pas figure:nth-child(even){margin-top:2.5rem}.pas .siroka img{height:20rem;width:30rem}
+.pas figure{margin:0;flex:0 0 auto;scroll-snap-align:start}.pas img{height:16rem;width:22rem;max-width:none;object-fit:cover}
+.pas figure:nth-child(even){margin-top:2.5rem}.pas .siroka img{height:16rem;width:24rem}
 .o-nas{background:var(--ruze)}.o-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
 blockquote{margin:2rem 0 0;font-family:var(--serif);font-size:1.5rem;line-height:1.35;padding-left:1.4rem;border-left:2px solid var(--zlato-t)}
 .poukaz-uvod{max-width:50ch;color:var(--ink2);margin:1.2rem 0 3rem}
@@ -86,6 +86,6 @@ address{font-style:normal;margin:1.5rem 0 2rem}.platby{display:flex;flex-wrap:wr
  .hlavicka nav{display:none;flex-direction:column;width:100%;gap:0;padding-bottom:.8rem}.hlavicka nav.otevrene{display:flex}.hlavicka nav a{padding:.7rem 0;border-top:1px solid var(--cara)}
  .hero-grid,.vyber,.o-grid,.konf,.kontakt-grid{grid-template-columns:1fr}.sliby{grid-template-columns:1fr}.panel{grid-template-columns:1fr}
  .hero-foto{margin:1rem 0 0 1.5rem}.kontura-hero{left:-1.4rem;height:106%}.kontura-sluzby{display:none}.konf-nahled{position:static;order:-1}
- .pas img,.pas .siroka img{height:14rem}.pas .siroka img{width:21rem}
+ .pas img,.pas .siroka img{height:11rem;width:15.5rem}.panel-foto img{max-width:15rem}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.odkryt{opacity:1;transform:none;transition:none}.kontura path{animation:none!important;stroke-dashoffset:0!important}}
