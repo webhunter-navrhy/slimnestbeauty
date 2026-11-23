@@ -5,37 +5,49 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <p class="psane">Brno · Staré Brno</p>
-      <h1>Péče, která Vám vrátí lehkost a&nbsp;sebejistotu</h1>
-      <p class="uvod">Tvarování těla, zpevnění pokožky a lymfodrenáž pro ženy i muže. V klidném soukromém salonu, kde se nemusíte za nic stydět.</p>
-      <p class="tlacitka"><a class="btn" href="#kontakt">Objednat se</a> <a class="btn btn-linka" href="#sluzby">Co nabízíme</a></p>
-      <p class="adresa-hero">Křídlovická 43/24, Brno · parkování u budovy</p>
+      <p class="nadtitul">Brno · Staré Brno · soukromý salon</p>
+      <h1>Tělo, ve kterém se cítíte <em>dobře.</em></h1>
+      <p class="uvod">Tvarování postavy, zpevnění pokožky a lymfodrenáž pro ženy i muže. V klidném salonu, kde se nemusíte za nic stydět.</p>
+      <p class="tlacitka"><a class="btn" href="#kontakt">Objednat se</a> <a class="btn btn-linka" href="#poukaz">Sestavit dárkový poukaz</a></p>
     </div>
-    <div class="hero-foto">{{ img('tvar.jpg', 'Žena s upraveným účesem a zdravou pletí', sizes='(min-width: 60rem) 50vw, 100vw') }}</div>
+    <div class="hero-foto">
+      {{ img('tvar.jpg', 'Žena s upraveným účesem a zdravou pletí', sizes='(min-width: 60rem) 44vw, 90vw') }}
+      <svg class="kontura kontura-hero" viewBox="0 0 220 640" aria-hidden="true" focusable="false"><path pathLength="1" d="M150 4 C128 40 128 74 140 104 C152 134 150 156 128 178 C98 208 84 244 100 292 C112 330 108 352 90 388 C70 428 56 470 72 520 C80 546 96 566 118 580 M150 4 C178 36 182 70 170 102 C158 136 164 160 188 192 C214 226 214 262 192 300 C170 340 170 366 188 404 C206 444 206 490 184 530 C170 556 150 574 118 580"/></svg>
+    </div>
   </div>
-</section>
-
-<section class="sekce proc">
-  <div class="wrap">
-    <h2>Proč k nám</h2>
-    <ol role="list" class="proc-seznam">
-      <li><h3>Komfort během celé procedury</h3><p>Klidný, příjemně provoněný interiér a televize v místnostech. Můžete si pustit film, seriál nebo hudbu.</p></li>
-      <li><h3>Férové a dostupné ceny</h3><p>Ceny jsou transparentní, bez skrytých poplatků. Klient vždy přesně ví, za co platí.</p></li>
-      <li><h3>Parkování a soukromí</h3><p>Soukromé parkování přímo u budovy, čistý a tichý prostor s dostatkem soukromí.</p></li>
-    </ol>
+  <div class="wrap sliby">
+    <p><strong>Komfort celou dobu.</strong> Klidný, provoněný interiér a televize v místnostech. Pustíte si film, seriál nebo hudbu.</p>
+    <p><strong>Ceny bez překvapení.</strong> Transparentní, bez skrytých poplatků. Vždy víte, za co platíte.</p>
+    <p><strong>Soukromí a parkování.</strong> Parkování přímo u budovy, čistý a tichý prostor.</p>
   </div>
 </section>
 
 <section class="sekce sluzby" id="sluzby">
+  <svg class="kontura kontura-sluzby" viewBox="0 0 60 1000" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M40 0 C10 120 10 220 34 330 C56 430 56 520 30 620 C6 716 12 820 40 1000"/></svg>
   <div class="wrap">
-    <p class="psane">Naše služby</p>
-    <h2>Ošetření, která mají smysl</h2>
-    {% for s in data.sluzby %}
-    <article class="sluzba{{ ' obracene' if loop.index is even }}">
-      <div class="sluzba-text"><span class="stitek">{{ s.stitek }}</span><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p><a class="odkaz" href="#kontakt">Objednat se</a></div>
-      <div class="ram sluzba-foto">{{ img(s.foto, s.nazev, sizes='(min-width: 60rem) 40vw, 90vw') }}</div>
-    </article>
-    {% endfor %}
+    <h2>Vyberte si podle toho, čeho chcete dosáhnout</h2>
+    <div class="vyber">
+      <div class="vyber-menu" role="tablist" aria-label="Ošetření">
+        {% for s in data.sluzby %}
+        <button type="button" role="tab" id="tab-{{ loop.index }}" aria-controls="panel-{{ loop.index }}" aria-selected="{{ 'true' if loop.first else 'false' }}"><span>{{ s.stitek }}</span><b>{{ s.nazev }}</b></button>
+        {% endfor %}
+      </div>
+      <div class="vyber-panely">
+        {% for s in data.sluzby %}
+        <article class="panel" role="tabpanel" id="panel-{{ loop.index }}" aria-labelledby="tab-{{ loop.index }}"{% if not loop.first %} hidden{% endif %}>
+          <div class="panel-foto">{{ img(s.foto, s.nazev, sizes='(min-width: 60rem) 38vw, 90vw') }}</div>
+          <div class="panel-text"><h3>{{ s.nazev }}</h3><p>{{ s.popis }}</p><a class="odkaz" href="#kontakt">Objednat se na toto ošetření</a></div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pruh-ai">
+  <div class="wrap">
+    <p>Nevíte, které ošetření je pro Vás to pravé?</p>
+    <button type="button" class="btn btn-linka" data-otevri-asistenta>Zeptejte se asistenta</button>
   </div>
 </section>
 
@@ -43,21 +55,19 @@
   <div class="wrap">
     <h2>Salon, ve kterém zpomalíte</h2>
     <p class="salon-uvod">Atmosféra není jen doplněk, je součástí zážitku. Moderní a kvalitní vybavení, každý detail nastavený tak, aby byl průběh pohodlný a přirozeně příjemný.</p>
-    <div class="galerie">
-      <div class="ram g1">{{ img('recepce.jpg', 'Recepce salonu s posezením', sizes='(min-width: 60rem) 40vw, 90vw') }}</div>
-      <div class="ram g2">{{ img('mistnost1.jpg', 'Ošetřovna s lehátkem a televizí', sizes='(min-width: 60rem) 30vw, 90vw') }}</div>
-      <div class="ram g3">{{ img('mistnost2.jpg', 'Druhá místnost salonu', sizes='(min-width: 60rem) 30vw, 90vw') }}</div>
-      <div class="ram g4">{{ img('rucniky.jpg', 'Ručníky a svíčky v ošetřovně', sizes='(min-width: 60rem) 60vw, 90vw') }}</div>
-    </div>
+  </div>
+  <div class="pas" tabindex="0" aria-label="Fotky salonu">
+    <figure>{{ img('vstup.jpg', 'Vstup do salonu na Křídlovické ulici', sizes='420px') }}</figure>
+    <figure>{{ img('recepce.jpg', 'Recepce salonu s posezením', sizes='420px') }}</figure>
+    <figure>{{ img('mistnost1.jpg', 'Ošetřovna s lehátkem a televizí', sizes='420px') }}</figure>
+    <figure>{{ img('mistnost2.jpg', 'Druhá místnost salonu', sizes='420px') }}</figure>
+    <figure class="siroka">{{ img('rucniky.jpg', 'Ručníky a svíčky v ošetřovně', sizes='640px') }}</figure>
   </div>
 </section>
 
 <section class="sekce o-nas" id="o-nas">
   <div class="wrap o-grid">
-    <div>
-      <p class="psane">O nás</p>
-      <h2>Místo, kde se nemusíte stydět za své tělo</h2>
-    </div>
+    <h2>Místo, kde se nemusíte stydět za své tělo</h2>
     <div class="o-text">
       <p>Slim Nest Beauty vzniklo s myšlenkou vytvořit místo, kde se lidé budou cítit dobře, respektovaně a v bezpečném prostředí. Salón jsem založila společně se svým partnerem, který stojí za celým projektem se mnou.</p>
       <p>Sama mám zdravotní a hormonální potíže a pravidelně podstupuji různé procedury, protože mi pomáhají cítit se lépe. Díky tomu vím, jak důležité je, aby byla péče citlivá, příjemná a aby člověku opravdu ulevila. Nejen fyzicky, ale i psychicky.</p>
@@ -67,16 +77,63 @@
 </section>
 
 <section class="sekce poukaz" id="poukaz">
-  <div class="wrap poukaz-grid">
-    <div class="poukaz-text">
-      <p class="psane">Dárkové poukazy</p>
-      <h2>Darujte péči, relax a viditelné výsledky</h2>
-      <p>Poukaz lze vystavit na konkrétní proceduru nebo na libovolnou hodnotu. Je vhodný k narozeninám, Vánocům, výročí i jako poděkování. Je přenosný a má stanovenou dobu platnosti. Vystavení je možné osobně na recepci, nebo v reprezentativním tištěném provedení.</p>
-      <p class="tlacitka"><a class="btn btn-zlato" href="#kontakt">Objednat poukaz</a></p>
-    </div>
-    <div class="poukazy">
-      <div class="p-karta p1">{{ img('poukaz-cerny.jpg', 'Černý dárkový poukaz se zlatým písmem', sizes='(min-width: 60rem) 36vw, 90vw') }}</div>
-      <div class="p-karta p2">{{ img('poukaz-ruzovy.jpg', 'Růžový dárkový poukaz se zlatým písmem', sizes='(min-width: 60rem) 36vw, 90vw') }}</div>
+  <div class="wrap">
+    <h2>Dárkový poukaz podle Vašich představ</h2>
+    <p class="poukaz-uvod">Vyberte hodnotu nebo ošetření, design a věnování. Poukaz vidíte rovnou vedle. Objednávku nám odešlete e-mailem a domluvíme převzetí.</p>
+    <div class="konf">
+      <form class="konf-form" id="konf" novalidate>
+        <fieldset><legend>1. Na co poukaz je</legend>
+          <label class="volba"><input type="radio" name="druh" value="hodnota" checked> Na libovolnou hodnotu</label>
+          <label class="volba"><input type="radio" name="druh" value="osetreni"> Na konkrétní ošetření</label>
+          <div data-druh="hodnota">
+            <div class="cipy">
+              <label><input type="radio" name="castka" value="1000"><span>1 000 Kč</span></label>
+              <label><input type="radio" name="castka" value="2000" checked><span>2 000 Kč</span></label>
+              <label><input type="radio" name="castka" value="3000"><span>3 000 Kč</span></label>
+              <label><input type="radio" name="castka" value="jina"><span>Jiná částka</span></label>
+            </div>
+            <label class="pole" data-jina hidden>Částka v Kč <input type="number" name="jina" min="100" step="100" inputmode="numeric" placeholder="např. 2500"></label>
+          </div>
+          <div data-druh="osetreni" hidden>
+            <label class="pole">Ošetření
+              <select name="osetreni">
+                {% for s in data.sluzby %}<option>{{ s.nazev }}</option>{% endfor %}
+                <option>Vyberu později, nechám na obdarovaném</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset><legend>2. Vzhled</legend>
+          <div class="cipy">
+            <label><input type="radio" name="vzhled" value="ruzovy" checked><span>Pudrově růžový</span></label>
+            <label><input type="radio" name="vzhled" value="cerny"><span>Černý</span></label>
+          </div>
+        </fieldset>
+        <fieldset><legend>3. Pro koho</legend>
+          <label class="pole">Pro koho <input name="komu" maxlength="40" placeholder="např. Janě"></label>
+          <label class="pole">Od koho <input name="od" maxlength="40" placeholder="např. Petr"></label>
+          <label class="pole">Věnování <textarea name="venovani" rows="3" maxlength="140" placeholder="Pár slov k poukazu"></textarea></label>
+        </fieldset>
+        <fieldset><legend>4. Převzetí</legend>
+          <label class="volba"><input type="radio" name="predani" value="osobně na recepci" checked> Osobně na recepci</label>
+          <label class="volba"><input type="radio" name="predani" value="v tištěném provedení"> V tištěném provedení</label>
+        </fieldset>
+        <label class="pole">Váš e-mail pro potvrzení <input name="email" type="email" autocomplete="email" placeholder="vas@email.cz"></label>
+        <button class="btn btn-zlato" type="submit">Odeslat objednávku e-mailem</button>
+        <p class="formular-stav" role="status" aria-live="polite">Ukázka konfigurátoru: tlačítko připraví e-mail se zadanými údaji. Online platba se doplní při napojení.</p>
+      </form>
+      <div class="konf-nahled">
+        <div class="karta karta-ruzovy" id="karta" aria-live="polite">
+          <img class="karta-logo" src="{{ base }}logo.png" alt="" width="64" height="64">
+          <p class="karta-nadpis">Dárkový poukaz</p>
+          <p class="karta-hodnota" id="k-hodnota">2 000 Kč</p>
+          <p class="karta-komu" id="k-komu">Pro vás</p>
+          <p class="karta-venovani" id="k-venovani">&nbsp;</p>
+          <p class="karta-od" id="k-od"></p>
+          <p class="karta-pata">Slim Nest Beauty · Křídlovická 43/24, Brno</p>
+        </div>
+        <p class="nahled-pozn">Náhled poukazu se mění podle Vašeho výběru. Platnost a podmínky poukazu určuje salon.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -98,4 +155,14 @@
     <div class="form-box">{% include "_formular.html" %}</div>
   </div>
 </section>
+{% endblock %}
+
+{% block konec %}
+<button type="button" class="ai-tlacitko" data-otevri-asistenta aria-expanded="false" aria-controls="ai-panel">Zeptejte se</button>
+<aside class="ai-panel" id="ai-panel" role="dialog" aria-label="Asistent salonu (ukázka)" hidden>
+  <header><div><strong>Asistent Slim Nest Beauty</strong><small>Ukázka: odpovídá z textů tohoto webu. Po napojení odpovídá skutečný AI asistent podle Vašeho ceníku a pravidel.</small></div><button type="button" class="ai-zavrit" aria-label="Zavřít">×</button></header>
+  <div class="ai-okno" id="ai-okno" aria-live="polite"><p class="b">Dobrý den, jsem asistent salonu. Na co se chcete zeptat?</p></div>
+  <div class="ai-rychle" id="ai-rychle"></div>
+  <form class="ai-form" id="ai-form"><input name="q" placeholder="Napište otázku…" aria-label="Otázka" autocomplete="off"><button type="submit">Odeslat</button></form>
+</aside>
 {% endblock %}

@@ -17,20 +17,22 @@
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">{% endif %}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Albert+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 {% block head %}{% endblock %}
 {% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
 </head>
 <body>
+<script>document.documentElement.classList.add("js")</script>
 <a class="skip" href="#obsah">Přeskočit na obsah</a>
 <header class="hlavicka">
   <div class="wrap">
     <a href="{{ url('') }}" class="logo">{% if site.logo %}<img src="{{ base }}{{ site.logo }}" alt="{{ site.nazev }}" height="64" width="64">{% else %}{{ site.nazev }}{% endif %}<span class="logo-text">Slim Nest Beauty</span></a>
-    <nav aria-label="Hlavní">
+    <nav aria-label="Hlavní" id="hl-nav">
       {% for n in site.nav %}<a href="{{ n.href if n.href.startswith(('#', 'http', 'tel:', 'mailto:')) else url(n.href) }}">{{ n.text }}</a> {% endfor %}
     </nav>
     <a class="btn btn-hlavicka" href="#kontakt">Objednat se</a>
+    <button class="menu-tl" type="button" aria-expanded="false" aria-controls="hl-nav">Menu</button>
   </div>
 </header>
 <main id="obsah">
@@ -44,6 +46,7 @@
     <p><a href="{{ site.sameas[1] }}" rel="noopener">Instagram</a> · <a href="{{ site.sameas[0] }}" rel="noopener">Facebook</a></p>
   </div>
 </footer>
+{% block konec %}{% endblock %}
 <script src="{{ asset('js/main.js') }}" defer></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
-# Koncept – Slim Nest Beauty
-1. Tři koncepty: (a) „Poukaz“ – web jako luxusní dárkový poukaz: zlatá linka v rámečku, černá a pudrová růžová, psané písmo jako v logu; (b) „Zrcadlo“ – před/po a čisté klinické plochy; (c) „Budoár“ – tmavé plátno, svíčky, hodně fotek prostoru.
-2. Vybrán (a): klient má poukaz ve zlaté fólii na černé a růžové (fotky 06–09), logo je jemná linka a kaligrafie, tón „klid, soukromí, žádný stud“. Klinické (b) by šlo proti tónu, (c) máme jen 400px fotky prostoru.
-3. Sekce: hero (rámeček s fotkou) → proč k nám (3 body) → služby (řádky s velkými číslicemi) → salon (galerie) → o nás (růžová) → poukaz (černá, signature) → platba + kontakt. Signature: dárkové poukazy se při najetí/rolování lehce natočí, zlatý rámeček se „vykreslí“.
-4. Písma: Gilda Display (nadpisy, test háčků OK), Jost (text), Parisienne (drobné psané akcenty). Paleta: černá #171413, zlatá #c89365 / #b8893f, pudrová #dcb4b2, krém #f7f1ea.
-5. Zakázané vzory: bez gradientů a kartiček s ikonami; jediný „arch“ tvar není použit.
-6. Porovnání: poslední weby v registru jsou jiné obory a bez zlaté linky/poukazu; display font Gilda dosud nebyl dvakrát po sobě.
+# Koncept v2 – Slim Nest Beauty (23. 11. 2026, po odmítnutí v1)
+Klientka: v1 je „moc podobná dnešnímu webu“, nesedí písmo a grafika. Chce modernější, elegantnější, originální web a vlastní grafiku, konfigurátor poukazu a AI asistenta.
+1. Tři koncepty: (a) „Kontura“ – jediná plynulá zlatá linka siluety (z loga), která provází stránkou a vykresluje se při rolování; velká vysoká antikva, krémový papír; (b) „Lékárnička“ – klinický minimalismus se sérií měření; (c) „Šatna“ – styl časopisu, koláže fotek s popisky.
+2. Vybrán (a): logo je linková silueta a kaligrafie, takže vlastní kreslená grafika z jedné linky je z brandu a ne z knihovny efektů. (b) by šlo proti tónu „žádný stud“, (c) vyžaduje víc kvalitních fotek, než máme.
+3. Sekce: hero (velký nadpis + fotka s konturou) → tři sliby v textu → služby jako výběr podle cíle (přepínač) → pruh asistenta → salon (vodorovný pás fotek) → o nás (růžová plocha) → konfigurátor dárkového poukazu s živým náhledem → kontakt. Signature: kontura, která se kreslí s rolováním; konfigurátor s živým náhledem poukazu.
+4. Písma: Bodoni Moda (nadpisy, vysoký kontrast, test háčků) + Albert Sans (text). Žádné psané písmo, žádná Gilda. Paleta z brandu: papír #f5efe6, inkoust #1c1715, zlato #b8863f / #c89365, pudrová #ecd3cd.
+5. Zakázané vzory: žádný (bez marquee, zrna, countrů, 01/02/03, karet s ikonami, tmavé zlaté sekce, rámečků ve zlaté lince jako v v1). Asistent je označen jako ukázka s odpověďmi z textů webu, ne falešný živý chat.
+6. Porovnání: v1 měla zlaté dvojité rámečky kolem fotek, Gilda + Parisienne, služby střídavě foto vlevo/vpravo, černou sekci s poukazy. v2 nemá rámečky, jiné písmo, služby jako přepínač a poukaz jako interaktivní konfigurátor. Bodoni Moda se v posledních 5 webech nepoužila.
