@@ -110,3 +110,6 @@ address{font-style:normal;margin:1.5rem 0 2rem}.platby{display:flex;flex-wrap:wr
 .menu-tl,.btn-hlavicka,.tema-tl{font-family:var(--sans)}
 @media (max-width:60rem){.mapa-ram{aspect-ratio:4/3}}
 @media (prefers-reduced-motion:reduce){h1 em,h2 em{animation:none!important}.kontura-hero path{animation:none!important}.karta{transform:none!important}}
+.kontakt-grid>*{min-width:0}.mapa-ram{width:100%;max-width:100%}
+@media (max-width:60rem){.mapa-ram{aspect-ratio:auto;height:18rem;min-height:0}}
+body{overflow-x:clip}.karta{max-width:100%}
