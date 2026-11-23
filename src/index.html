@@ -106,7 +106,8 @@
         <fieldset><legend>2. Vzhled</legend>
           <div class="cipy">
             <label><input type="radio" name="vzhled" value="ruzovy" checked><span>Pudrově růžový</span></label>
-            <label><input type="radio" name="vzhled" value="cerny"><span>Černý</span></label>
+            <label><input type="radio" name="vzhled" value="cerny"><span>Černo-zlatý</span></label>
+            <label><input type="radio" name="vzhled" value="perlovy"><span>Perleťový</span></label>
           </div>
         </fieldset>
         <fieldset><legend>3. Pro koho</legend>
@@ -123,7 +124,8 @@
         <p class="formular-stav" role="status" aria-live="polite">Ukázka konfigurátoru: tlačítko připraví e-mail se zadanými údaji. Online platba se doplní při napojení.</p>
       </form>
       <div class="konf-nahled">
-        <div class="karta karta-ruzovy" id="karta" aria-live="polite">
+        <div class="karta-obal"><div class="karta karta-ruzovy" id="karta" aria-live="polite">
+          <svg class="karta-kontura" viewBox="0 0 220 640" aria-hidden="true" focusable="false"><path d="M150 4 C128 40 128 74 140 104 C152 134 150 156 128 178 C98 208 84 244 100 292 C112 330 108 352 90 388 C70 428 56 470 72 520 C80 546 96 566 118 580 M150 4 C178 36 182 70 170 102 C158 136 164 160 188 192 C214 226 214 262 192 300 C170 340 170 366 188 404 C206 444 206 490 184 530 C170 556 150 574 118 580"/></svg>
           <img class="karta-logo" src="{{ base }}logo.png" alt="" width="64" height="64">
           <p class="karta-nadpis">Dárkový poukaz</p>
           <p class="karta-hodnota" id="k-hodnota">2 000 Kč</p>
@@ -131,7 +133,7 @@
           <p class="karta-venovani" id="k-venovani">&nbsp;</p>
           <p class="karta-od" id="k-od"></p>
           <p class="karta-pata">Slim Nest Beauty · Křídlovická 43/24, Brno</p>
-        </div>
+        </div></div>
         <p class="nahled-pozn">Náhled poukazu se mění podle Vašeho výběru. Platnost a podmínky poukazu určuje salon.</p>
       </div>
     </div>
@@ -153,6 +155,16 @@
       <ul role="list" class="platby"><li>Hotově</li><li>NFC (telefon)</li><li>QR kód</li><li>Benefit Plus</li><li>Pluxee</li></ul>
     </div>
     <div class="form-box">{% include "_formular.html" %}</div>
+    <div class="mapa">
+      <h3>Kde nás najdete</h3>
+      <div class="mapa-ram" id="mapa" data-src="https://www.openstreetmap.org/export/embed.html?bbox=16.5975%2C49.1840%2C16.6075%2C49.1895&amp;layer=mapnik&amp;marker=49.1866807%2C16.6025131">
+        <div class="mapa-zastupce"><svg viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M-20 300 C150 240 220 330 380 250 C540 170 600 280 760 180 C860 120 940 150 1020 90"/><path d="M-20 360 C180 320 300 380 500 330 C700 280 820 340 1020 280"/></svg>
+          <p>Křídlovická 43/24, Brno-Staré Brno</p>
+          <button type="button" class="btn btn-zlato" data-nacti-mapu>Zobrazit interaktivní mapu</button>
+          <small>Mapa se načte z OpenStreetMap až po kliknutí.</small></div>
+      </div>
+      <p class="mapa-odkazy"><a class="odkaz" href="https://www.google.com/maps/dir/?api=1&amp;destination=K%C5%99%C3%ADdlovick%C3%A1+43%2F24+Brno" rel="noopener">Navigovat v Google Mapách</a> <a class="odkaz" href="https://mapy.cz/zakladni?q=K%C5%99%C3%ADdlovick%C3%A1%2043%2F24%20Brno" rel="noopener">Otevřít v Mapy.cz</a> <span>Parkování přímo u budovy.</span></p>
+    </div>
   </div>
 </section>
 {% endblock %}

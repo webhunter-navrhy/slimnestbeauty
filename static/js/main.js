@@ -4,6 +4,14 @@ var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){retu
 var tl=$('.menu-tl'),nav=$('#hl-nav');
 if(tl)tl.addEventListener('click',function(){var o=nav.classList.toggle('otevrene');tl.setAttribute('aria-expanded',o)});
 $$('#hl-nav a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('otevrene')})});
+// tmavý / světlý režim
+var tt=$('.tema-tl'),de=document.documentElement,mt=$('meta[name=theme-color]');
+var tema=function(t,ul){de.dataset.tema=t;if(tt){tt.setAttribute('aria-pressed',t==='dark');tt.setAttribute('aria-label',t==='dark'?'Přepnout na světlý režim':'Přepnout na tmavý režim')}if(mt)mt.content=t==='dark'?'#17100d':'#faf1ec';if(ul)try{localStorage.setItem('tema',t)}catch(e){}};
+tema(de.dataset.tema||'light',false);
+if(tt)tt.addEventListener('click',function(){tema(de.dataset.tema==='dark'?'light':'dark',true)});
+// mapa až po kliknutí
+var mp=$('#mapa'),mb=$('[data-nacti-mapu]');
+if(mb)mb.addEventListener('click',function(){var i=document.createElement('iframe');i.src=mp.getAttribute('data-src');i.title='Mapa: Slim Nest Beauty, Křídlovická 43/24, Brno';i.loading='lazy';mp.innerHTML='';mp.appendChild(i)});
 // přepínač služeb
 var taby=$$('.vyber-menu [role=tab]');
 taby.forEach(function(t){t.addEventListener('click',function(){taby.forEach(function(x){var on=x===t;x.setAttribute('aria-selected',on);$('#'+x.getAttribute('aria-controls')).hidden=!on})})});
@@ -26,11 +34,12 @@ if(f){
   $('#k-komu').textContent=v('komu')?'Pro '+v('komu'):'Pro vás';
   $('#k-venovani').textContent=v('venovani')||' ';
   $('#k-od').textContent=v('od')?'Od '+v('od'):''};
+ var ob=$('.karta-obal');if(ob&&matchMedia('(hover:hover)').matches){ob.addEventListener('pointermove',function(e){var r=ob.getBoundingClientRect();karta.style.setProperty('--ry',((e.clientX-r.left)/r.width-.5)*8+'deg');karta.style.setProperty('--rx',(.5-(e.clientY-r.top)/r.height)*8+'deg')});ob.addEventListener('pointerleave',function(){karta.style.setProperty('--rx','0deg');karta.style.setProperty('--ry','0deg')})}
  f.addEventListener('input',kresli);f.addEventListener('change',kresli);kresli();
  f.addEventListener('submit',function(e){e.preventDefault();
   var st=$('.formular-stav',f),em=v('email');
   if(v('druh')==='hodnota'&&v('castka')==='jina'&&!parseInt(v('jina'),10)){st.textContent='Doplňte prosím částku.';return}
-  var t=['Dobrý den,','','objednávám dárkový poukaz:','Na: '+obsah(),'Vzhled: '+(v('vzhled')==='cerny'?'černý':'pudrově růžový'),'Pro koho: '+(v('komu')||'-'),'Od koho: '+(v('od')||'-'),'Věnování: '+(v('venovani')||'-'),'Převzetí: '+v('predani'),'Kontakt na mě: '+(em||'-'),'','Děkuji'].join('\n');
+  var t=['Dobrý den,','','objednávám dárkový poukaz:','Na: '+obsah(),'Vzhled: '+({cerny:'černo-zlatý',perlovy:'perleťový'}[v('vzhled')]||'pudrově růžový'),'Pro koho: '+(v('komu')||'-'),'Od koho: '+(v('od')||'-'),'Věnování: '+(v('venovani')||'-'),'Převzetí: '+v('predani'),'Kontakt na mě: '+(em||'-'),'','Děkuji'].join('\n');
   st.textContent='Otevírám e-mail s objednávkou…';
   location.href='mailto:slimnestbeauty@gmail.com?subject='+encodeURIComponent('Objednávka dárkového poukazu')+'&body='+encodeURIComponent(t)});
 }
